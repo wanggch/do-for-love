@@ -1,0 +1,18 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="cacheEnabled" value="false"/>
+    </settings>
+    <typeAliases>
+        <!-- 映射文件中的类不用写全路径了-->
+        <package name="com.jasmine.doforlove.entity"/>
+    </typeAliases>
+    <typeHandlers>
+    </typeHandlers>
+    <plugins>
+        <plugin interceptor="com.jasmine.doforlove.plugin.SqlPrintInterceptor"></plugin>
+    </plugins>
+</configuration>
